@@ -16,6 +16,11 @@ import GOOD_OR_GOOD_PNG from "../../public/img/god-or-good.png";
 import GIG_BROTHER from "../../public/img/big-brother.png";
 import WHICH_SHIP_IS_REAL from "../../public/img/which-ship-is-real.png";
 import COLOR_BLINDNESS_PNG from "../../public/img/color-blindness.png";
+import ATM_LUCK_PNG from "../../public/img/atm-luck.png";
+import NO_MEDAL_HERO_PNG from "../../public/img/no-medal-hero.png";
+import ZERO_PARADOX_PNG from "../../public/img/zeno-paradox.png";
+import TORTURE_OR_NOT_PNG from "../../public/img/torture-or-not.png";
+
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -597,6 +602,243 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.88,
       superpositionNodes: 9,
+    },
+  },
+  {
+    id: "atm-luck",
+    title: "鴻運當頭的理查",
+    themeImage: ATM_LUCK_PNG,
+    content: `<p>理查到 ATM 提款，機器卻意外吐出一萬英鎊，<strong>但帳上只扣了一百。</strong></p>
+    <p>他觀察幾週，銀行毫無動靜，於是決定拿這筆「天上掉下來的財富」去買 BMW。</p>
+    <p>雖然一度良心不安，他最後還是安慰自己：</p>
+    <ul>
+      <li>這不是我偷的，是機器自己給我的。</li>
+      <li>銀行損失這種小錢又有保險，無傷大雅。</li>
+      <li>如果銀行系統會犯錯，那責任不在我。</li>
+    </ul>
+    <p><strong>這樣的行為，到底算不算偷？</strong></p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.6 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.9 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.75 },
+    ],
+    choices: [
+      {
+        title: "這就是偷，只是沒人發現罷了。",
+        outcome:
+          "根據結果主義或道德常理，他『明知』那筆錢不是他的，還拿來花，就構成不當得利。",
+      },
+      {
+        title: "這是銀行錯誤，不干理查的事。",
+        outcome: "這是責任轉移論：你只是接受了『世界的饋贈』，錯在發錢的人。",
+      },
+      {
+        title: "道德來自意圖，他沒惡意就不算壞人。",
+        outcome:
+          "義務論角度，若理查不是主動詐取，而是被動接受，有人會說他只是『運氣好』。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview: "明知會導致某種結果，你還能撇清自己的責任嗎？",
+      },
+      {
+        id: "digital-pirate",
+        title: "盜版行為的道德界線",
+        preview: "下載沒付錢的資源，真的不算偷嗎？",
+      },
+    ],
+    references: [
+      "《The Pig That Wants to Be Eaten》#16",
+      "Ethical theories on moral luck and responsibility",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.78,
+      superpositionNodes: 10,
+    },
+  },
+  {
+    id: "no-medal-hero",
+    title: "不能得勳章的英雄",
+    themeImage: NO_MEDAL_HERO_PNG,
+    content: `<p>二等兵肯尼（Private Kenney）在戰場上為了救同袍，撲向一顆手榴彈，當場炸死，但因此救了數十人。</p>
+  <p>他的家人原以為肯尼會獲得最高榮譽獎章——維多利亞十字勳章，卻被軍方拒絕：</p>
+  <blockquote><p>「肯尼超出了他的職責。他的行動雖英勇，但不符合軍隊的行動準則。我們不獎勵這種未經授權的自我犧牲。」</p></blockquote>
+  <p>軍方甚至補上一句更殘忍的邏輯：</p>
+  <blockquote><p>「爆炸一定會波及肯尼，他遲早會死，所以這不算他『為了救人』而死。」</p></blockquote>
+  <p><strong>如果你是肯尼的家人，你該如何為他辯護？</strong></p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.5 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.9 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.6 },
+    ],
+    choices: [
+      {
+        title: "制度應該比人命重要嗎？",
+        outcome:
+          "若制度變得不近人情，那還值得遵守嗎？這挑戰了『法理』與『情理』的界線。",
+      },
+      {
+        title: "肯尼真的是『不必要的犧牲』嗎？",
+        outcome: "他主動犧牲換來數十人存活，即使不是被命令的，這還不叫英雄？",
+      },
+      {
+        title: "軍方是不是在逃避責任？",
+        outcome: "不給勳章就不用背道德債？制度可能被拿來當作卸責的盾牌。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "utilitarian-sacrifice",
+        title: "功利主義與自我犧牲",
+        preview: "如果犧牲一人能救十人，這樣的行為值得讚揚嗎？",
+      },
+      {
+        id: "just-following-orders",
+        title: "只服從命令就沒錯嗎？",
+        preview: "軍隊倫理 vs. 個人道德判斷的永恆衝突。",
+      },
+    ],
+    references: [
+      "《The Pig That Wants to Be Eaten》 #16",
+      "Michael Walzer《Just and Unjust Wars》",
+      "軍隊倫理與功利主義批評",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.65,
+      superpositionNodes: 8,
+    },
+  },
+  {
+    id: "zeno-paradox",
+    title: "烏龜贏了",
+    themeImage: ZERO_PARADOX_PNG,
+    content: `<p>阿基里斯是全希臘跑得最快的戰士，但他卻讓烏龜塔奎因（Tarquin）先起跑100碼。</p>
+  <p>評論員芝諾宣布：「阿基里斯絕對追不上塔奎因。因為他每次抵達烏龜先前的位置時，烏龜又往前了一點。」</p>
+  <p>「如此反覆無窮，阿基里斯永遠只能接近烏龜，而無法超越。」</p>
+  <p>觀眾驚呼：「合理啊！這場比賽注定沒懸念了。」<br>但就在眾人下注的瞬間——阿基里斯超車成功，全場錯愕！</p>
+  <p><strong>所以，數學與邏輯出錯了？還是我們的直覺錯了？</strong></p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.7,
+        description: "無限可分 vs 現實物理的直覺抗辯",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.5,
+        description: "數學邏輯不算錯，但只要理解無限總和，問題就解了",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.9,
+        description: "「明明會被追上，但邏輯說追不上」的心理落差超強",
+      },
+    ],
+    choices: [
+      {
+        title: "芝諾詭論到底哪裡怪？",
+        outcome: "它假設無限個時間點無限延長，卻忽略了無限總和可以有限。",
+      },
+      {
+        title: "現實真的符合數學嗎？",
+        outcome:
+          "數學模型會近似現實，但不是所有邏輯上的無限都能在物理世界實現。",
+      },
+      {
+        title: "這讓你懷疑『常識』嗎？",
+        outcome:
+          "我們相信烏龜會被追上，卻又被理性推導說服；這衝突點才是哲學有趣之處。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "simulation-infinity",
+        title: "虛擬世界的無限問題",
+        preview: "如果模擬世界無法處理無限，那它還能逼真嗎？",
+      },
+      {
+        id: "quantum-continuity",
+        title: "量子世界是連續還是不連續？",
+        preview: "芝諾的問題也出現在物理裡：時間是無限可分的嗎？",
+      },
+    ],
+    references: [
+      "Zeno’s Paradoxes – Stanford Encyclopedia of Philosophy",
+      "《The Pig That Wants to Be Eaten》#18",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.6,
+      superpositionNodes: 9,
+    },
+  },
+  {
+    id: "torture-or-not",
+    title: "拷打還是不拷打",
+    themeImage: TORTURE_OR_NOT_PNG,
+    content: `<p>想像有一個恐怖分子知道即將發生的恐怖攻擊地點和時間，但他拒絕透露任何信息。在某些極端情況下，政府可能會考慮使用拷打手段來迫使他開口。這樣的行為是否可以接受？</p>
+  <p>一方認為：「如果拷打能夠拯救無數無辜生命，那麼使用這種方法在某些情況下是合理的。」而另一方則認為：「不論情況如何，使用拷打違背了基本人權，無論多少生命處於危險之中。」</p>
+  <p><strong>問題的關鍵是：如果我們認為拷打是錯誤的，那是否就意味著我們不能在任何情況下接受它？如果我們認為它是可以被接受的，那又該如何界定這些極端情況？</strong></p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.8,
+        description: "道德兩難，權衡大局與基本人權",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.9,
+        description: "拷打的倫理辯論在社會中永遠不會達成共識",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.6,
+        description: "以結果為依據的倫理是否能適應每個情境？",
+      },
+    ],
+    choices: [
+      {
+        title: "為了拯救更多人，是否可以使用拷打手段？",
+        outcome: "如果結果是拯救無數無辜的生命，這樣的行為是否能被合理化？",
+      },
+      {
+        title: "人權不容妥協，無論情況如何。",
+        outcome:
+          "這種觀點會強調基本人權的不可侵犯性，並拒絕在任何情境下使用拷打。",
+      },
+      {
+        title: "拷打是否會帶來後果性的問題？",
+        outcome:
+          "如果接受拷打，會不會導致政府權力的濫用？對個人自由的侵害可能會不斷擴大。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "ticking-bomb",
+        title: "滴答炸彈困境",
+        preview: "一個類似的哲學困境，是否應該在一名恐怖分子身上施用拷打？",
+      },
+      {
+        id: "human-rights",
+        title: "人權與國家安全",
+        preview: "如何平衡基本人權和國家安全的需求？",
+      },
+    ],
+    references: [
+      "Torture and Moral Theory by Susan Neiman",
+      "The ticking bomb scenario – Stanford Encyclopedia of Philosophy",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.7,
+      superpositionNodes: 10,
     },
   },
 ];
