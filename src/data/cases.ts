@@ -15,7 +15,7 @@ import RAPE_THEN_KILL_PNG from "../../public/img/rape-then-kill.png";
 import GOOD_OR_GOOD_PNG from "../../public/img/god-or-good.png";
 import GIG_BROTHER from "../../public/img/big-brother.png";
 import WHICH_SHIP_IS_REAL from "../../public/img/which-ship-is-real.png";
-
+import COLOR_BLINDNESS_PNG from "../../public/img/color-blindness.png";
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -544,6 +544,58 @@ export const quantumCases = [
     ],
     probabilityWave: {
       collapseThreshold: 0.75,
+      superpositionNodes: 9,
+    },
+  },
+  {
+    id: "color-blindness",
+    title: "研究紅色的色盲",
+    themeImage: COLOR_BLINDNESS_PNG,
+    content: `<p >瑪麗是世界上最偉大的神經科學家，她對顏色的運作了如指掌。<br>
+    但她從小就患有色盲，無法看到紅色。她的實驗室中，所有顏色都被濾除，只存在黑、白與灰階。</p>
+    <p >有一天，研究團隊治好了她的色盲，她第一次「親眼看見」紅色。</p>
+    <p >問題來了：<strong >在這一刻，她是否學到了什麼『新知識』？</strong></p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.95 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.85 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.9 },
+    ],
+    choices: [
+      {
+        title: "瑪麗學到了新知識，說明有些知識無法靠語言或科學傳達？",
+        outcome:
+          "這是支持『質感論（Qualia）』的觀點：有些經驗是純主觀的，只能透過親身體驗。",
+      },
+      {
+        title: "她什麼都沒學到，只是把已知理論對應到新的感官刺激。",
+        outcome:
+          "這是物理主義的立場：所有知識都可還原為物理描述，看到紅色只是刺激匹配，沒有新增知識。",
+      },
+      {
+        title: "或許她學到的不是知識，而是一種新的存在方式？",
+        outcome:
+          "可能她沒有學到『事實』，而是獲得一種新的意識狀態——知識與經驗之間，存在第三種東西。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "ai-emotion",
+        title: "AI能感覺『痛』嗎？",
+        preview: "如果AI模擬疼痛行為，我們能說它真的『痛』嗎？",
+      },
+      {
+        id: "taste-of-coffee",
+        title: "咖啡的味道能解釋嗎？",
+        preview: "你可以把咖啡的味道講得很詳盡，但從未喝過的人能『懂』嗎？",
+      },
+    ],
+    references: [
+      "Frank Jackson, *Epiphenomenal Qualia* (1982)",
+      "《The Pig That Wants to Be Eaten》 #13",
+      "David Chalmers, *The Conscious Mind* (1996)",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.88,
       superpositionNodes: 9,
     },
   },

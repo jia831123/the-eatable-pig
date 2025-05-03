@@ -72,7 +72,8 @@
                                 <button v-for="(related, index) in caseData.relatedCases" :key="index"
                                     class="p-3 rounded-lg bg-purple-50/50 hover:bg-purple-100/30 transition-colors text-left">
                                     <div class="text-sm font-medium text-purple-600">{{ related.title }}</div>
-                                    <div class="text-xs text-purple-400 mt-1 line-clamp-2">{{ related.preview }}</div>
+                                    <div class="text-xs text-purple-400 mt-1 line-clamp-2">{{ related.preview }}
+                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -82,28 +83,6 @@
         </main>
     </div>
 </template>
-
-<script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-
-const handleImageLoad = (event: Event) => {
-    const img = event.target as HTMLImageElement
-    img.classList.add('moire-active')
-}
-
-const route = useRoute()
-const caseId = computed(() => route.params.id as string)
-
-const selectedBranch = ref(0)
-
-import { quantumCases } from '../data/cases'
-
-const caseData = computed(() => {
-    const foundCase = quantumCases.find(c => c.id === caseId.value)
-    return foundCase || quantumCases[0]
-})
-</script>
 
 <style scoped>
 @keyframes moire-entrance {
@@ -171,4 +150,67 @@ const caseData = computed(() => {
 .branch-card:hover {
     transform: translateX(8px);
 }
+
+.aspect-video {
+    aspect-ratio: 1 / 1;
+    max-width: min(100%, 600px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img {
+    height: auto;
+}
 </style>
+
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+
+const handleImageLoad = (event: Event) => {
+    const img = event.target as HTMLImageElement;
+    img.style.objectFit = 'cover';
+};
+
+const lazyLoadImages = () => {
+    const images = document.querySelectorAll('img[data-src]');
+    const config = {
+        rootMargin: '0px 0px 50px 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries, self) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target as HTMLImageElement;
+                img.src = img.dataset.src || '';
+                img.onload = handleImageLoad;
+                self.unobserve(img);
+            }
+        });
+    }, config);
+
+    images.forEach(image => {
+        observer.observe(image);
+    });
+};
+
+onMounted(() => {
+    lazyLoadImages();
+});
+
+const route = useRoute()
+const caseId = computed(() => route.params.id as string)
+
+const selectedBranch = ref(0)
+
+import { quantumCases } from '../data/cases'
+
+const caseData = computed(() => {
+    const foundCase = quantumCases.find(c => c.id === caseId.value)
+    return foundCase || quantumCases[0]
+})
+</script>
