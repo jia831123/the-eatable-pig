@@ -260,4 +260,58 @@ export const quantumCases = [
       superpositionNodes: 14,
     },
   },
+  {
+    // 推論錯誤的賭度
+    id: "gamblers-fallacy",
+    title: "推論錯誤的賭度",
+    themeImage: "../../public/img/gamblers-fallacy.png",
+    content: `<p>假設你正在玩擲硬幣的遊戲。這個遊戲公平，每次擲硬幣有50%的機會是正面，50%的機會是反面。</p>
+    <p>但如果連續擲了五次都是正面，你會覺得下一次反面的機率是不是大了呢？</p>
+    <blockquote><p>這就是<strong>賭徒謬誤</strong>：錯誤地推測，過去的結果會影響未來的隨機事件。</p></blockquote>
+    <p>事實上，擲硬幣每次的結果都是獨立的，不受之前的結果影響。正面和反面的機會永遠是50%。</p>
+    <p>但人們經常會認為，如果已經出現過幾次正面，那反面就「應該」要來了，這種推論反映了我們如何在無意識中將隨機事件視為有模式可循。</p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.7 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.5 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.65 },
+    ],
+    choices: [
+      {
+        title: "如果過去的事件對未來沒有影響，那我們如何做決策？",
+        outcome:
+          "這讓我們面對隨機與不確定性的真實。其實，隨機性並不必然意味着無法預測，很多時候，理解隨機的規律性反而能讓我們更理性地決策。",
+      },
+      {
+        title: "為什麼即使知道賭徒謬誤，我們還會犯這樣的錯誤？",
+        outcome:
+          "這反映了我們的大腦在尋找模式和規律時的天然傾向。這是一種生物學上的偏誤，讓我們常常在不自覺中錯誤地解讀隨機事件。",
+      },
+      {
+        title: "賭徒謬誤是否揭示了我們對運氣的誤解？",
+        outcome:
+          "是的。賭徒謬誤其實揭示了我們對「運氣」的非理性理解。認為過去的結果會影響未來的事件，其實是一種不合理的信任模式。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "law-of-large-numbers",
+        title: "大數法則",
+        preview: "隨著樣本數量的增加，平均值會趨近於理論值。",
+      },
+      {
+        id: "cognitive-bias",
+        title: "認知偏誤",
+        preview: "我們如何被自己大腦的錯誤推理影響決策？",
+      },
+    ],
+    references: [
+      "Benedict Carey, *How We Decide* (2009)",
+      "Daniel Kahneman, *Thinking, Fast and Slow* (2011)",
+      "Richard Thaler, *Misbehaving: The Making of Behavioral Economics* (2015)",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.7,
+      superpositionNodes: 12,
+    },
+  },
 ];

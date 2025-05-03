@@ -103,12 +103,6 @@
             </div>
           </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <QuestionCard v-for="(question, index) in filteredQuestions" :key="index" :question="question"
-            @reveal="handleReveal(index)"
-            @navigate="router.push({ name: 'CaseDetails', params: { id: question.id } })" />
-        </div>
       </div>
     </main>
   </div>
@@ -136,7 +130,7 @@ window.addEventListener('resize', () => {
 
 import { quantumCases } from '../data/cases'
 
-const stripHtmlTags = (html) => {
+const stripHtmlTags = (html: string) => {
   return html.replace(/<[^>]*>/g, '');
 };
 
@@ -147,7 +141,6 @@ const featuredQuestions = computed(() => {
       id: q.id,
       title: q.title,
       content: stripHtmlTags(q.content),
-      popularity: Math.floor(q.quantumEntanglement * 100),
       tags: q.tags,
     }));
 });
@@ -173,11 +166,6 @@ onMounted(() => {
   }, 1500)
 })
 
-// 全局探索進度
-const totalProgress = computed(() => {
-  const revealedCount = featuredQuestions.filter(q => q.revealed).length
-  return (revealedCount / questions.length) * 100
-})
 
 const handleReveal = (index: number) => {
   router.push({ name: 'CaseDetails', params: { id: quantumCases[index].id } })
