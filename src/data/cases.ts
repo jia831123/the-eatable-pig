@@ -1,10 +1,24 @@
 // 量子哲學案例糾纏矩陣
+import FAKE_EVIL_PNG from "../../public/img/fake-evil.png";
+import QUANTUM_PIG_PNG from "../../public/img/quantum-pig.png";
+import KILLER_TRANSPORTER_PNG from "../../public/img/killer-transporter.png";
+import INDIAN_CANNOT_KNOW_ICE_PNG from "../../public/img/indian-cannot-know-ice.png";
+import VIRTUAL_AFFAIR_PNG from "../../public/img/virtual-affair.png";
+import GAMBLERS_FALLACY_PNG from "../../public/img/gamblers-fallacy.png";
+import AI_LABOR_PNG from "../../public/img/ai-labor.png";
+import MEMORY_UPLOAD_PNG from "../../public/img/memory-upload.png";
+import CLONE_RIGHTS_PNG from "../../public/img/clone-rights.png";
+import MIND_UPLOAD_PNG from "../../public/img/mind-upload.png";
+import PERCEPTION_REALITY_PNG from "../../public/img/perception-reality.png";
+import KNOWLEDGE_LIMITS_PNG from "../../public/img/knowledge-limits.png";
+import RAPE_THEN_KILL_PNG from "../../public/img/rape-then-kill.png";
+import GOOD_OR_GOOD_PNG from "../../public/img/god-or-good.png";
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
     id: "fake-evil",
     title: "欺騙我們的魔鬼",
-    themeImage: "../../public/img/fake-evil.png",
+    themeImage: FAKE_EVIL_PNG,
     content: `<p >設想有一位<strong >全能的惡魔（或超級AI）</strong>，牠的唯一目的是<strong >讓你活在徹底的幻覺裡</strong>。<br>
       你以為你看見太陽、你有身體、你喝水會解渴，但這一切——都是牠設計好的騙局。</p>
       <ul > <li> <p >你觸摸桌子，感覺堅硬？</p> <blockquote data-start="250" data-end="268"> <p data-start="252" data-end="268" class="">錯，是惡魔直接操控你的感知神經。</p> </blockquote> </li> <li data-start="269" data-end="334" class=""> <p data-start="271" data-end="283" class="">你相信數學是永恆不變的？</p> <blockquote data-start="286" data-end="334"> <p data-start="288" data-end="334" class="">也錯，也可能是牠編的規則，現在讓你覺得「2+2=4」，明天搞不好就讓你覺得「2+2=鯊魚」。</p> </blockquote> </li> </ul>`,
@@ -46,7 +60,7 @@ export const quantumCases = [
   {
     id: "quantum-pig",
     title: "自願被吃的豬",
-    themeImage: "../../public/img/quantum-pig.png",
+    themeImage: QUANTUM_PIG_PNG,
     content:
       "<p>想像有一隻經過基因編輯的豬，它的神經結構被設計得完全願意、甚至渴望被人類吃掉。牠會開口說話、請求你殺牠，甚至會表達「這是牠存在的目的」——你會吃牠嗎？</p>",
     tags: [
@@ -91,7 +105,7 @@ export const quantumCases = [
     // 會殺人的傳送裝置
     id: "killer-transporter",
     title: "會殺人的傳送裝置",
-    themeImage: "../../public/img/killer-transporter.png",
+    themeImage: KILLER_TRANSPORTER_PNG,
     content: `<p>想像有一台名為<strong>「傳送機」</strong>的裝置，能在一瞬間將你從A點「複製—刪除—重建」到B點。</p>
     <p>聽起來像是魔法？但技術上它是這樣運作的：</p>
     <ul>
@@ -149,7 +163,7 @@ export const quantumCases = [
     // 印度人不可語冰
     id: "indian-cannot-know-ice",
     title: "印度人不可語冰",
-    themeImage: "../../public/img/indian-cannot-know-ice.png",
+    themeImage: INDIAN_CANNOT_KNOW_ICE_PNG,
     content: `<p>想像有一位<strong>印度婦女</strong>，她從小生活在沙漠，終其一生都沒離開過那片乾涸的土地。</p>
     <p>某一天，她的表弟回來，告訴她在北方的世界裡，有一種叫<strong>「冰」</strong>的物質，當它在寒冷的環境下出現時，可以凍結水。</p>
     <p>但婦女聽了後，根本無法理解這個概念，因為在她的經驗中，水從未能夠凍結過，更遑論「冰」的存在。</p>
@@ -205,7 +219,7 @@ export const quantumCases = [
     // 虛擬外遇
     id: "virtual-affair",
     title: "虛擬外遇",
-    themeImage: "../../public/img/virtual-affair.png",
+    themeImage: VIRTUAL_AFFAIR_PNG,
     content: `<p>你的伴侶最近迷上了一款新世代 VR 沉浸式遊戲，在遊戲中，他和一個虛擬角色展開了火熱又浪漫的戀情。</p>
     <p>他們一起旅行、親吻、調情、甚至發生了關係——當然，這一切都只是<strong>虛擬的</strong>。</p>
     <blockquote><p>但這些感覺、回憶和刺激，<strong>對他來說都是真實的</strong>。</p></blockquote>
@@ -264,7 +278,7 @@ export const quantumCases = [
     // 推論錯誤的賭度
     id: "gamblers-fallacy",
     title: "推論錯誤的賭度",
-    themeImage: "../../public/img/gamblers-fallacy.png",
+    themeImage: VIRTUAL_AFFAIR_PNG,
     content: `<p>假設你正在玩擲硬幣的遊戲。這個遊戲公平，每次擲硬幣有50%的機會是正面，50%的機會是反面。</p>
     <p>但如果連續擲了五次都是正面，你會覺得下一次反面的機率是不是大了呢？</p>
     <blockquote><p>這就是<strong>賭徒謬誤</strong>：錯誤地推測，過去的結果會影響未來的隨機事件。</p></blockquote>
@@ -312,6 +326,120 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.7,
       superpositionNodes: 12,
+    },
+  },
+  {
+    // 被迫先姦後殺的二等兵
+    id: "rape-then-kill",
+    title: "被迫先姦後殺的二等兵",
+    themeImage: RAPE_THEN_KILL_PNG,
+    content: `<p>一位<strong>年輕的二等兵</strong>，被敵軍俘虜，囚禁於戰區村莊中。</p>
+    <p>敵軍軍官命令他：<strong>「強暴這個村婦，然後把她殺了，否則，我們就會派十人輪姦後，再折磨致死。」</strong></p>
+    <p>他內心掙扎——若聽從命令，他將<strong>親手做出一件他完全無法接受的惡行</strong>；若拒絕，村婦將面臨更慘烈的命運。</p>
+    <blockquote><p>這不是選擇善惡，而是選擇哪個惡比較不那麼糟。</p></blockquote>
+    <p>你會怎麼選？他又該怎麼選？<strong>一個人是否有道德義務去作惡，為了避免更大的惡？</strong></p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.95 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 1.0 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.9 },
+    ],
+    choices: [
+      {
+        title: "若為了避免更大的悲劇，我是否被道德『強迫』去行惡？",
+        outcome:
+          "這是經典的『道德緊急命令』困境。某些倫理學派（如效益主義）會說：選擇傷害最小的那個。但康德主義者會反駁：以任何理由行惡都是不可接受的，因為人不能被當成手段。",
+      },
+      {
+        title: "如果我的選擇只是不作惡，而讓更大惡發生，我真的無辜嗎？",
+        outcome:
+          "這打中了『行動罪 vs. 不作為罪』的核心。我們是否有責任阻止他人行惡？在那個時刻，不作為是否其實就是一種道德懦弱？",
+      },
+      {
+        title: "在這樣的情況下，是否根本沒有『正確』的選擇？",
+        outcome:
+          "許多現實中的倫理情境其實無法二分對錯，只能選擇『較不壞』。這讓我們質疑，道德是否真的能提供一個普遍適用的指南？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview: "犧牲一人救五人，真的是對的選擇嗎？",
+      },
+      {
+        id: "moral-responsibility",
+        title: "不作為的罪",
+        preview: "當你袖手旁觀，你真的沒有責任嗎？",
+      },
+    ],
+    references: [
+      "Philippa Foot, *The Problem of Abortion and the Doctrine of the Double Effect* (1967)",
+      "Judith Jarvis Thomson, *The Trolley Problem* (1976)",
+      "Immanuel Kant, *Groundwork of the Metaphysics of Morals* (1785)",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.92,
+      superpositionNodes: 16,
+    },
+  },
+  {
+    // 先有善，還是先有上帝？
+    id: "god-or-good",
+    title: "先有善，還是先有上帝？",
+    themeImage: GOOD_OR_GOOD_PNG,
+    content: `<p>某天你問一位虔誠教徒：「你為什麼相信殺人是錯的？」</p>
+    <p>他說：「因為上帝說殺人是錯的。」</p>
+    <p>但這句話背後，藏著一個<strong>哲學雷區</strong>——</p>
+    <ul>
+      <li>是因為上帝說它是善的，所以它才是善的？</li>
+      <li>還是因為它本來就善，即使上帝沒說，它也善？</li>
+    </ul>
+    <blockquote><p>這被稱為<strong>尤西弗羅悖論（Euthyphro dilemma）</strong>，來自柏拉圖的對話錄。</p></blockquote>
+    <p>如果善是上帝決定的，那祂說<strong>折磨嬰兒是善的</strong>，那就變成善？</p>
+    <p>如果善獨立於上帝，那祂就不是善的源頭？那祂還是萬物的創造者嗎？</p>
+    <p><strong>道德到底是神授的？還是獨立存在的永恆真理？</strong></p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.85 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.95 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.88 },
+    ],
+    choices: [
+      {
+        title: "如果上帝說什麼都是善，那善就變得任意、沒有原則？",
+        outcome:
+          "這將道德淪為神的命令清單，缺乏內在邏輯。許多學者因此主張：道德不能僅靠神的意志來定義。",
+      },
+      {
+        title: "若善獨立存在，那上帝只是發現善，而非創造它？",
+        outcome:
+          "這會削弱上帝的絕對主權。某些神學家則試圖迴避這兩難，說：『上帝的本質就是善』，但這是否真的解決了悖論，仍有爭議。",
+      },
+      {
+        title: "我們真的需要一位神，才能知道什麼是善嗎？",
+        outcome:
+          "許多無神論倫理學者認為，人類有能力透過理性、同理心與社會契約建立道德，而不需要宗教作為基礎。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "atheist-ethics",
+        title: "無神論者也能有道德嗎？",
+        preview: "如果沒有神，人還會行善嗎？",
+      },
+      {
+        id: "ai-morality",
+        title: "AI 的道德指南針從哪來？",
+        preview: "若道德不是神授，那該如何教給人工智慧？",
+      },
+    ],
+    references: [
+      "Plato, *Euthyphro* (~399 BC)",
+      "Philip Quinn, *Divine Command Theory* (1978)",
+      "Richard Dawkins, *The God Delusion* (2006)",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.83,
+      superpositionNodes: 13,
     },
   },
 ];
