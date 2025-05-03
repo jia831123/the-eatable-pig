@@ -129,10 +129,17 @@ const caseData = computed(() => {
         margin-left: auto;
         margin-right: auto;
         border-radius: 1rem;
+        /* 移除左右邊距以增加顯示區塊大小 */
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .shadow-quantum-md {
         box-shadow: 0 15px 30px -8px rgba(168, 85, 247, 0.12), 0 0 12px -2px rgba(236, 72, 153, 0.08);
+    }
+
+    main {
+        padding: 0 !important;
     }
 }
 

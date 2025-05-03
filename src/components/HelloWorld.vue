@@ -3,7 +3,7 @@
 
 
     <!-- 主內容區 -->
-    <main class="p-4 md:p-8 relative">
+    <main class="p-0 sm:p-8 relative">
       <!-- 分類篩選雲 -->
       <div
         class="sticky top-4 z-40 mb-8 mx-4 md:mx-8 p-4 rounded-2xl backdrop-blur-xl bg-white/50 shadow-soft-lg transition-all duration-500 hover:shadow-soft-2xl">
@@ -135,8 +135,7 @@ const stripHtmlTags = (html: string) => {
 };
 
 const featuredQuestions = computed(() => {
-  return [...quantumCases].sort((a, b) => b.probabilityWave.collapseThreshold - a.probabilityWave.collapseThreshold)
-    .slice(0, 5)
+  return [...quantumCases]
     .map(q => ({
       id: q.id,
       title: q.title,

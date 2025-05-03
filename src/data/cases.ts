@@ -13,6 +13,9 @@ import PERCEPTION_REALITY_PNG from "../../public/img/perception-reality.png";
 import KNOWLEDGE_LIMITS_PNG from "../../public/img/knowledge-limits.png";
 import RAPE_THEN_KILL_PNG from "../../public/img/rape-then-kill.png";
 import GOOD_OR_GOOD_PNG from "../../public/img/god-or-good.png";
+import GIG_BROTHER from "../../public/img/big-brother.png";
+import WHICH_SHIP_IS_REAL from "../../public/img/which-ship-is-real.png";
+
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -278,7 +281,7 @@ export const quantumCases = [
     // 推論錯誤的賭度
     id: "gamblers-fallacy",
     title: "推論錯誤的賭度",
-    themeImage: VIRTUAL_AFFAIR_PNG,
+    themeImage: GAMBLERS_FALLACY_PNG,
     content: `<p>假設你正在玩擲硬幣的遊戲。這個遊戲公平，每次擲硬幣有50%的機會是正面，50%的機會是反面。</p>
     <p>但如果連續擲了五次都是正面，你會覺得下一次反面的機率是不是大了呢？</p>
     <blockquote><p>這就是<strong>賭徒謬誤</strong>：錯誤地推測，過去的結果會影響未來的隨機事件。</p></blockquote>
@@ -440,6 +443,108 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.83,
       superpositionNodes: 13,
+    },
+  },
+  {
+    id: "big-brother-station",
+    title: "老大哥的太空站",
+    themeImage: GIG_BROTHER,
+    content: `<p >為了拍攝第七十三集的電視影集《老大哥》，製作單位啟用了最新科技：「皮耶」——一部能準確預測人類行為的超級電腦。</p>
+    <p >心理學家說明：「人腦是物理性的，只要我們掌握足夠的神經數據與環境變數，就能預測人類接下來的反應。皮耶會持續監控參賽者的腦部活動，並即時推演他們未來幾分鐘可能的行為與思考反應。」</p>
+    <p >這不僅是節目娛樂，更是一場哲學實驗：如果我們能被完美預測，那麼——我們是否真的擁有自由意志？</p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.9 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.7 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.8 },
+    ],
+    choices: [
+      {
+        title: "如果我的一切行為都能被預測，那我還有選擇的自由嗎？",
+        outcome:
+          "這是決定論與自由意志的正面交鋒。若一切行為可被預測，那自由意志是否只是錯覺？",
+      },
+      {
+        title: "我們的大腦是否等同於我們的『自我』？",
+        outcome:
+          "如果你就是你的腦，那麼當腦被完全讀懂時，你的所有思維也將透明無遺。是否還存在某種超越大腦的『我』？",
+      },
+      {
+        title: "如果觀眾更在意『角色怎麼想』而非『怎麼做』，這代表什麼？",
+        outcome:
+          "或許我們對人性更關注的是動機與心理，而非行為本身。那是否表示內在自由仍有價值，即使行為可被預測？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "free-will-simulator",
+        title: "模擬中的自由意志",
+        preview: "在全監控虛擬世界中，我們的選擇還是真實的嗎？",
+      },
+      {
+        id: "upload-soul",
+        title: "靈魂是否能上傳？",
+        preview: "如果大腦活動可以被完全複製，『你』還會是你嗎？",
+      },
+    ],
+    references: [
+      "Laplace's Demon, Pierre-Simon Laplace (1814)",
+      "Daniel Dennett, *Freedom Evolves* (2003)",
+      "《The Pig That Wants to Be Eaten》 #9",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.85,
+      superpositionNodes: 10,
+    },
+  },
+  {
+    id: "which-ship-is-real",
+    title: "哪一艘才是真的",
+    themeImage: WHICH_SHIP_IS_REAL,
+    content: `<p >想像有一艘船，這艘船的每個部件，逐步被替換成全新的材料。最終，這艘船不再有任何原始的部件，只剩下新的部分。</p>
+    <p >然而，這艘船會繼續航行，仍然被稱為“原船”。但這樣的船還算不算是原來的船？</p>
+    <p >另外，有一艘完全由相同材料製造的船，幾乎無差異。它也被稱為“原船”，那麼，哪一艘船才是真正的“原船”呢？</p>`,
+    tags: [
+      { label: "燒腦度", color: "bg-purple-400", progress: 0.7 },
+      { label: "爭議程度", color: "bg-blue-400", progress: 0.8 },
+      { label: "迷惑值", color: "bg-pink-400", progress: 0.6 },
+    ],
+    choices: [
+      {
+        title: "如果船的所有部件都被更換，那它還是原來的船嗎？",
+        outcome:
+          "這是傳統的「船隻悖論」。當所有部分都被替換後，船的身份是否依舊成立？",
+      },
+      {
+        title: "如果有一艘船在物理上與原船相同，那麼它就是原船嗎？",
+        outcome:
+          "這提出了關於物理相似性與身份認同之間的張力。是相同的結構就代表相同的船嗎？",
+      },
+      {
+        title: "船隻的身份是基於它的歷史還是基於它的構成材料？",
+        outcome:
+          "這涉及到歷史性身份與物質性身份的區別。歷史能改變我們對一物體的理解，還是物體的當下結構才最重要？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "personal-identity",
+        title: "個人身份的悖論",
+        preview: "你是否還是那個你自己，當你身上的每一個細胞都在不斷更替時？",
+      },
+      {
+        id: "teletransportation-paradox",
+        title: "傳送悖論",
+        preview: "如果將你完全複製到另一個地方，你還是原來的你嗎？",
+      },
+    ],
+    references: [
+      "Ship of Theseus paradox, Plutarch (c. 100 AD)",
+      "John Locke's theory of personal identity",
+      "《The Pig That Wants to Be Eaten》 #11",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.75,
+      superpositionNodes: 9,
     },
   },
 ];
