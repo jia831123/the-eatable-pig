@@ -62,10 +62,13 @@
           </div>
 
           <!-- 推薦問題瀑布流 -->
-          <div v-if="false" class="mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">推薦探索</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div v-for="(question, index) in recommendedQuestions" :key="index"
+          <div class="mb-16">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">你是否有思考過？</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 cursor-pointer">
+              <div v-for="(question, index) in recommendedQuestions" :key="index" @click="$router.push({
+                name: 'CaseDetails',
+                params: { id: question.id }
+              })"
                 class="relative group rounded-xl bg-white/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5">
                 <!-- 骨架屏 -->
                 <div v-if="!question.loaded" class="animate-pulse space-y-4">
@@ -76,7 +79,6 @@
                 <template v-else>
                   <div class="flex items-center gap-3 mb-4">
                     <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-400 to-purple-500" />
-                    <span class="text-sm text-gray-500">#{{ index + 1 }} 推薦</span>
                   </div>
                   <h4 class="font-medium text-gray-800 line-clamp-2 mb-2">{{ question.title }}</h4>
                   <div class="flex justify-between items-center">
@@ -144,17 +146,17 @@ const featuredQuestions = computed(() => {
     }));
 });
 
-const recommendedQuestions = ref(
-  Array.from({ length: 3 }, () => {
-    const randomCase = quantumCases[Math.floor(Math.random() * quantumCases.length)];
-    return {
-      id: randomCase.id,
-      title: randomCase.title,
-      progress: randomCase.probabilityWave.collapseThreshold,
+const recommendedQuestions = computed(() => {
+  return [...quantumCases].sort(() => Math.random() - 0.5).slice(0, 6)
+    .map(q => ({
+      id: q.id,
+      title: q.choices.sort(() => Math.random() - 0.5)[0].title,
+      content: stripHtmlTags(q.content),
+      tags: q.tags,
+      progress: Math.random(),
       loaded: true
-    };
-  })
-);
+    }));
+});
 
 onMounted(() => {
   setTimeout(() => {

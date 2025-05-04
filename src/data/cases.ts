@@ -27,6 +27,7 @@ import EPIPHENIA_THOUGHTS_PNG from "../../public/img/epiphenia-thoughts.png";
 import LIFEBOAT_PNG from "../../public/img/lifeboat.png";
 import BEETLE_PNG from "../../public/img/beetle.png";
 import SQUARE_CIRCLE_PNG from "../../public/img/square_circle.png";
+import BURIDAN_PARADOX_PNG from "../../public/img/buridan-paradox.png";
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -1321,6 +1322,140 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.7,
       superpositionNodes: 9,
+    },
+  },
+  {
+    id: "buridans-dilemma",
+    title: "不理性，毋寧死",
+    themeImage: BURIDAN_PARADOX_PNG,
+    content:
+      "<p>有里丹（Buridan）是一個致力於理性行動的人，這次他餓壞了，卻陷入了奇特的困境。</p> \
+<p>他正好住在兩家等距的奇異電子超市之間，但無論從價格、距離、評價，甚至食物種類來看，兩家都一模一樣。</p> \
+<p>由於無法找到「理性理由」來選擇其中一方，他卡住了——沒有行動，沒有選擇。</p> \
+<p>時間一分一秒過去，他越來越餓，直到快要昏倒。就在這時，他靈機一動：擲銅板決定，這總比餓死好！</p> \
+<p><strong>但問題來了：擲銅板這件事本身就是不理性的行為嗎？若為了求生而進行不理性決策，是否反而是理性的選擇？</strong></p>",
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.6,
+        description: "理性與決策理論的自我矛盾，讓人反覆推敲選擇的根本依據。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.7,
+        description: "關於理性是否容許隨機行動的討論，哲學家分歧極大。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.8,
+        description: "當『理性』的執行阻礙了生存，我們還能相信理性至上嗎？",
+      },
+    ],
+    choices: [
+      {
+        title: "擲銅板真的理性嗎？",
+        outcome:
+          "若兩者無差異，採隨機機制以行動，其實避免了更大損失，反而是策略上的理性。",
+      },
+      {
+        title: "堅持理性就該什麼都不做？",
+        outcome: "一種看法是：沒有理由不代表不能行動，只是代表選擇沒有偏好。",
+      },
+      {
+        title: "理性是否該包含『務實求生』？",
+        outcome:
+          "若理性導致自我毀滅，可能需要重估理性的定義：它該促進生存，而非抽象一致性。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "prisoners-dilemma",
+        title: "囚徒困境",
+        preview: "當完全理性反而導致集體損害，我們該怎麼選擇？",
+      },
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview: "當不同選擇無法比較時，是否該讓決策隨機？",
+      },
+    ],
+    references: [
+      "Buridan’s Ass – Stanford Encyclopedia of Philosophy",
+      "《The Pig That Wants to Be Eaten》#25",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.4,
+      superpositionNodes: 5,
+    },
+  },
+  {
+    id: "buridans-dilemma",
+    title: "不理性，毋寧死",
+    themeImage: "BURIDAN_PARADOX_PNG",
+    content:
+      "<p>有里丹（Buridan）是一個致力於理性行動的人，這次他餓壞了，卻陷入了奇特的困境。</p> \
+<p>他正好住在兩家等距的奇異電子超市之間，但無論從價格、距離、評價，甚至食物種類來看，兩家都一模一樣。</p> \
+<p>由於無法找到「理性理由」來選擇其中一方，他卡住了——沒有行動，沒有選擇。</p> \
+<p>時間一分一秒過去，他越來越餓，直到快要昏倒。就在這時，他靈機一動：擲銅板決定，這總比餓死好！</p> \
+<p><strong>但問題來了：擲銅板這件事本身就是不理性的行為嗎？若為了求生而進行不理性決策，是否反而是理性的選擇？</strong></p>",
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.6,
+        description: "理性與決策理論的自我矛盾，讓人反覆推敲選擇的根本依據。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.7,
+        description: "關於理性是否容許隨機行動的討論，哲學家分歧極大。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.8,
+        description: "當『理性』的執行阻礙了生存，我們還能相信理性至上嗎？",
+      },
+    ],
+    choices: [
+      {
+        title: "擲銅板真的理性嗎？",
+        outcome:
+          "若兩者無差異，採隨機機制以行動，其實避免了更大損失，反而是策略上的理性。",
+      },
+      {
+        title: "堅持理性就該什麼都不做？",
+        outcome: "一種看法是：沒有理由不代表不能行動，只是代表選擇沒有偏好。",
+      },
+      {
+        title: "理性是否該包含『務實求生』？",
+        outcome:
+          "若理性導致自我毀滅，可能需要重估理性的定義：它該促進生存，而非抽象一致性。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "prisoners-dilemma",
+        title: "囚徒困境",
+        preview: "當完全理性反而導致集體損害，我們該怎麼選擇？",
+      },
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview: "當不同選擇無法比較時，是否該讓決策隨機？",
+      },
+    ],
+    references: [
+      "Buridan’s Ass – Stanford Encyclopedia of Philosophy",
+      "《The Pig That Wants to Be Eaten》#25",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.4,
+      superpositionNodes: 5,
     },
   },
 ];
