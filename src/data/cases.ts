@@ -28,6 +28,7 @@ import LIFEBOAT_PNG from "../../public/img/lifeboat.png";
 import BEETLE_PNG from "../../public/img/beetle.png";
 import SQUARE_CIRCLE_PNG from "../../public/img/square_circle.png";
 import BURIDAN_PARADOX_PNG from "../../public/img/buridan-paradox.png";
+import FORGET_PAIN_PNG from "../../public/img/forget-pain.png";
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -1456,6 +1457,76 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.4,
       superpositionNodes: 5,
+    },
+  },
+  // 忘記疼痛
+  {
+    id: "forgetting-pain",
+    title: "忘記疼痛",
+    themeImage: FORGET_PAIN_PNG,
+    content:
+      "<p>一位清醒的病人正在接受縫合手術。</p> \
+<p>當針刺入他的腿時，他痛得大叫；但幾秒後，他卻語氣平靜地說：「感覺不錯。」</p> \
+<p>這不是奇蹟，而是新技術：它不阻斷痛覺，而是讓大腦無法記住痛。</p> \
+<p>醫生說：「若沒有記憶，痛苦何在？」病人也點頭：「我不怕再來一次。」</p> \
+<p><strong>那麼問題來了：痛苦是瞬間的感受，還是後續記憶才讓它成為『痛苦』？</strong></p>",
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.6,
+        description:
+          "挑戰我們對『壞經驗』本質的理解，是感覺本身還是記憶才是關鍵？",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.8,
+        description:
+          "若痛苦不能被記憶，是否還值得避免？這對倫理學與醫學都是難題。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.7,
+        description: "我們怕痛是因為它當下痛，還是因為我們『會記得』它？",
+      },
+    ],
+    choices: [
+      {
+        title: "無痛記憶就等於無痛苦嗎？",
+        outcome: "如果你經歷極大疼痛，但完全不記得，那它還算是一種傷害嗎？",
+      },
+      {
+        title: "未來的恐懼建立在什麼基礎上？",
+        outcome:
+          "人們之所以避免痛苦，是因為記憶讓我們學會『害怕』它。若無記憶，還會有恐懼嗎？",
+      },
+      {
+        title: "這是否能成為倫理上的麻醉替代品？",
+        outcome:
+          "如果技術讓你痛但不記得，你願意用它替代麻醉嗎？你會覺得自己被冒犯了嗎？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "experience-machine",
+        title: "體驗機器",
+        preview: "如果快樂能被模擬，真實痛苦是否還重要？",
+      },
+      {
+        id: "day-survivor",
+        title: "每天重設的人生",
+        preview: "如果你每天都忘記昨天，還會在意痛苦與錯誤嗎？",
+      },
+    ],
+    references: [
+      "Pain and Memory – Stanford Encyclopedia of Philosophy",
+      "《The Pig That Wants to Be Eaten》#26",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.5,
+      superpositionNodes: 6,
     },
   },
 ];

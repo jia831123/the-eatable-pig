@@ -25,9 +25,20 @@
 
           </header>
 
+          <div class="flex justify-center mt-8">
+            <button @click="randomArticle"
+              class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white font-extrabold py-8 px-16 rounded-full shadow-2xl hover:shadow-4xl transition-transform transform hover:scale-175 animate-pulse relative overflow-hidden">
+              <span
+                class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 opacity-50 blur-lg"></span>
+              <span class="relative z-10">🎉✨ 隨便來一個 ✨🎉</span>
+              <span class="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition-opacity"></span>
+            </button>
+          </div>
+
           <!-- 特色問題輪播區 -->
           <div
             class="mb-16 group/carousel relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 p-8 shadow-inner-xl cursor-pointer">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">抽到這 5 個試試</h3>
             <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
               <div v-for="(question, index) in featuredQuestions" :key="index" @click="$router.push({
                 name: 'CaseDetails',
@@ -111,6 +122,8 @@
       </div>
     </main>
 
+
+
     <footer class="bg-gray-800 text-white p-6 mt-12">
       <div class="max-w-4xl mx-auto text-center">
         <p class="text-sm">
@@ -180,4 +193,9 @@ onMounted(() => {
 const handleReveal = (index: number) => {
   router.push({ name: 'CaseDetails', params: { id: quantumCases[index].id } })
 }
+
+const randomArticle = () => {
+  const randomIndex = Math.floor(Math.random() * quantumCases.length);
+  router.push({ name: 'CaseDetails', params: { id: quantumCases[randomIndex].id } });
+};
 </script>
