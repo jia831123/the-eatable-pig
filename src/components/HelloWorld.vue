@@ -4,23 +4,25 @@
 
     <!-- 主內容區 -->
     <main class="p-0 sm:p-8 relative">
-      <!-- 分類篩選雲 -->
       <div
-        class="sticky top-4 z-40 mb-8 mx-4 md:mx-8 p-4 rounded-2xl backdrop-blur-xl bg-white/50 shadow-soft-lg transition-all duration-500 hover:shadow-soft-2xl">
+        class="sticky top-4 z-40 mb-8 mx-4 md:mx-8 p-4 rounded-2xl backdrop-blur-xl bg-white/70 shadow-soft-lg transition-all duration-500 hover:shadow-soft-2xl">
 
         <div class="max-w-4xl mx-auto">
           <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-600">
+            <h1 class="text-5xl font-extrabold text-gray-900 mb-6">
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600">
                 自願被吃的豬豬
               </span>
             </h1>
+
             <div class="flex items-center justify-center">
-              <img width="300" height="300" src="../assets/pig.png" />
+              <img class="rounded-full shadow-lg transition-transform duration-300 hover:scale-105" width="320"
+                height="320" src="../assets/pig.png" />
             </div>
-            <!-- 漸變分隔線 -->
-            <div
-              class="relative my-8 h-[2px] w-48 mx-auto bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-60" />
+            <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+              在這，思維如同一場無盡的即興演奏，隨著腦內的量子泡沫起舞，時而瘋狂，時而靜謐，彷彿在追尋一個永遠不會揭曉的謎底，卻又樂在其中。
+            </p>
+
           </header>
 
           <!-- 特色問題輪播區 -->
@@ -33,7 +35,8 @@
               })"
                 class="flex-[0_0_320px] space-y-4 rounded-xl bg-white/80 p-6 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]">
                 <div class="flex items-center gap-3">
-                  <div class="h-9 w-9 rounded-full bg-gradient-to-br from-purple-500 to-pink-400" />
+                  <img :src="question.themeImage"
+                    class="h-9 w-9 rounded-full bg-gradient-to-br from-purple-500 to-pink-400" />
                   <h3 class="text-lg font-semibold text-gray-800">{{ question.title }}</h3>
                 </div>
                 <p class="text-gray-600 line-clamp-3">{{ question.content }}</p>
@@ -143,6 +146,7 @@ const featuredQuestions = computed(() => {
       title: q.title,
       content: stripHtmlTags(q.content),
       tags: q.tags,
+      themeImage: q.themeImage
     }));
 });
 

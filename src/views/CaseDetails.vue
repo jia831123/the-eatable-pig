@@ -5,7 +5,7 @@
 
         <main class="relative z-10 p-8 md:p-12 max-w-6xl mx-auto">
             <!-- 案例核心內容 -->
-            <div class="quantum-card bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-quantum-lg">
+            <div class="quantum-card bg-white/90 backdrop-blur-xl sm:rounded-3xl p-8 shadow-quantum-lg">
                 <!-- 非線性時間軸標題 -->
                 <h1
                     class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
@@ -63,7 +63,7 @@
                             <div v-for="(ref, index) in caseData.references" :key="index"
                                 class="text-sm text-purple-600 font-mono hover:text-pink-500 transition-colors group">
                                 <span class="opacity-70 group-hover:opacity-100 transition-opacity">{{ ref
-                                    }}</span>
+                                }}</span>
                             </div>
                         </div>
                         <div class="sticky top-24 p-6 bg-white/80 rounded-xl shadow-inner-lg">

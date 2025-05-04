@@ -1,5 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# 自願被吃的豬豬 🐷✨
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+歡迎來到自願被吃的豬豬，這是一個充滿驚喜的哲學遊樂場！在這裡，問題不只是問題，它們是思維的過山車 🎢，讓你在瘋狂與智慧之間自由翱翔。
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 專案背景 🎨
+
+這個網站不僅僅是哲學問題的集合，它是一場思想的嘉年華 🎪。從特色問題輪播到推薦問題瀑布流，每一個角落都藏著讓你大開眼界的驚喜。
+
+## 目標用戶 🎯
+
+無論你是哲學愛好者，還是尋求思維挑戰的冒險家 🧗‍♂️，這裡都是你的理想之地。創意工作者也能在這裡找到靈感的火花 💡。
+
+## 解決的問題 🧩
+
+自願被吃的豬豬提供了一個輕鬆愉快的環境，讓你在探索深刻哲學問題的同時，激發無限的創造力。
+
+## 預期的影響 🚀
+
+希望你能在這場哲學的冒險中，提升思維能力，並在瘋狂與智慧的交匯點中找到屬於你的樂趣！🎉
