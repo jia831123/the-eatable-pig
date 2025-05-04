@@ -20,6 +20,12 @@ import ATM_LUCK_PNG from "../../public/img/atm-luck.png";
 import NO_MEDAL_HERO_PNG from "../../public/img/no-medal-hero.png";
 import ZERO_PARADOX_PNG from "../../public/img/zeno-paradox.png";
 import TORTURE_OR_NOT_PNG from "../../public/img/torture-or-not.png";
+import SOPHIA_RATIONALITY from "../../public/img/sophia-rationality.png";
+import KENNETHS_HERESY from "../../public/img/kenneths-heresy.png";
+import DEATH_OVER_ENTERNITY from "../../public/img/death-over-eternity.png";
+import EPIPHENIA_THOUGHTS_PNG from "../../public/img/epiphenia-thoughts.png";
+import LIFEBOAT_PNG from "../../public/img/lifeboat.png";
+import BEETLE_PNG from "../../public/img/beetle.png";
 
 export const quantumCases = [
   {
@@ -838,6 +844,412 @@ export const quantumCases = [
     ],
     probabilityWave: {
       collapseThreshold: 0.7,
+      superpositionNodes: 10,
+    },
+  },
+  {
+    id: "sophia-rationality",
+    title: "蘇菲亞的理性困境",
+    themeImage: SOPHIA_RATIONALITY,
+    content: `<p>蘇菲亞一直以來都將理性視為自己生活的指導原則，她認為每一個行為都應該經過理性的分析與評估。然而，當她的朋友提出一個理性論證，說服她引爆炸彈以殺死大量無辜的人，並且這個論證似乎沒有任何明顯的邏輯錯誤時，蘇菲亞開始陷入了深深的困惑。</p>
+  <p>她知道，這樣的行為不符合她的道德標準，然而她也清楚地感受到，理性論證中的每一個步驟似乎都無可挑剔。這使得她開始懷疑，是否理性本身就足以支配我們的道德判斷，或者理性本身是否有某些盲點，無法正確引導我們的行為。</p>
+  <p><strong>蘇菲亞應該遵循這個理性論證，做出她不想做的選擇，還是應該聽從直覺，拒絕這樣的理性結論，雖然這可能會被視為非理性行為？</strong></p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.8,
+        description: "探索理性與道德、情感之間的衝突",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.9,
+        description: "涉及對理性行為的道德檢視，挑戰理性主導的信念",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.7,
+        description: "理性無法解釋所有道德問題，直覺在道德判斷中的作用",
+      },
+    ],
+    choices: [
+      {
+        title: "若完全依賴理性進行選擇，會不會失去人類的道德感？",
+        outcome:
+          "蘇菲亞發現，即便從理性角度看，行為的結果仍無法接受。理性在某些情況下無法涵蓋道德的全貌。",
+      },
+      {
+        title: "理性是否總能給出最正確的行為指引？",
+        outcome:
+          "理性可能提供一個明確的路徑，但若忽視情感與道德直覺，它可能走向錯誤的方向。",
+      },
+      {
+        title: "應該選擇理性行為還是情感/直覺行為來決定對錯？",
+        outcome:
+          "理性與情感的平衡是道德決策中不可忽視的一環，單一依賴理性可能會導致道德上的矛盾與痛苦。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview:
+          "在面對類似選擇時，如何平衡理性與道德直覺，作出最符合倫理的決策？",
+      },
+      {
+        id: "moral-dilemmas",
+        title: "道德困境中的理性與情感",
+        preview: "深入探討理性行為與道德情感間的衝突，及其對行為決策的影響。",
+      },
+    ],
+    references: [
+      "Utilitarianism by John Stuart Mill",
+      "Ethics: Inventing Right and Wrong by J.L. Mackie",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.75,
+      superpositionNodes: 12,
+    },
+  },
+  {
+    id: "kenneths-heresy",
+    title: "被誤解的叛徒",
+    themeImage: KENNETHS_HERESY,
+    content: `<p>在與世隔絕的聖希爾違荥格登會所，威勒費爾德教派的成員過著禁閉式的生活。外界資訊完全被封鎖，他們唯一的「窗戶」，就是每日播放的肥皂劇，並深信那就是現實世界的真實寫照。</p>
+  <p>有一天，年輕的肯尼斯決定離開會所去探索。他找到了心心念念的《加冕街》，卻震驚地發現那只是一處攝影棚。</p>
+  <p>帶著對真相的激動，肯尼斯返回會所，試圖告訴其他人實情。但他的話卻被視為瘋言瘋語，反被教徒們視為叛徒驅逐出境。</p>
+  <p>他所發現的真相，反而成了他被排斥的原因。他該如何證明世界不是他們以為的那樣？</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-500",
+        progress: 0.7,
+        description: "挑戰人對『現實』的感知本質，牽涉哲學與認知心理的深層思考",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-500",
+        progress: 0.6,
+        description: "真理重要，還是秩序重要？信念動搖是否應該受到懲罰？",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-500",
+        progress: 0.8,
+        description: "如果你活在虛假的世界，寧願知道還是繼續被騙？",
+      },
+    ],
+    choices: [
+      {
+        title: "誰才是真正瘋了的人？",
+        outcome:
+          "是目睹真相、與群體格格不入的肯尼斯，還是那些深信肥皂劇是真實的群眾？",
+      },
+      {
+        title: "集體幻覺是否比個體真相更具存續力？",
+        outcome: "當一個人與整個體系的信仰對立時，真相會因此失效嗎？",
+      },
+      {
+        title: "我們自己的世界，又有多真？",
+        outcome:
+          "我們接受的『新聞、歷史、價值觀』是否也存在與肥皂劇類似的操控？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "platos-cave",
+        title: "柏拉圖的洞穴寓言",
+        preview: "如果一切只是影子，而你看見了真光，該如何讓人相信你不是瘋子？",
+      },
+      {
+        id: "truman-show",
+        title: "《楚門的世界》真實版本",
+        preview: "如果你被全世界圍觀卻渾然不知，你還會相信自由意志嗎？",
+      },
+    ],
+    references: [
+      "Plato - Allegory of the Cave",
+      "《The Pig That Wants to Be Eaten》#20",
+      "電影《The Truman Show》",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.7,
+      superpositionNodes: 12,
+    },
+  },
+  {
+    id: "death-over-eternity",
+    title: "賴活不如好死",
+    themeImage: DEATH_OVER_ENTERNITY,
+    content: `<p>兩百年前，年輕的薇妲莉亞服下了長生不老的藥，幻想著無盡的冒險與愛情，卻萬萬沒料到這竟是漫長孤獨與麻木的開端。</p>
+  <p>世代更替，她孤身旁觀摯愛逝去、世界變遷。她所執行的計畫終將過時、失敗，未竟的志業也被無窮的時間稀釋成無意義的重複。</p>
+  <p>現在，她終於服下了解藥，走向終點。在火光中，她親手銷毀長生的藥方，微笑著重拾久違的終結與釋懷。</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-500",
+        progress: 0.6,
+        description:
+          "不偏重邏輯推理，而是逼問存在本質：活著的價值是因為終點的存在？",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-500",
+        progress: 0.8,
+        description:
+          "毀掉長生藥方是自私的？還是對人類的慈悲？你願意擁抱死亡嗎？",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-500",
+        progress: 0.7,
+        description:
+          "你真的想要永生嗎？還是只是害怕死亡？這之間的分界模糊不清。",
+      },
+    ],
+    choices: [
+      {
+        title: "長生究竟是祝福還是詛咒？",
+        outcome: "如果時間成為無止盡的拖延，那一切目標是否將失去急迫性與價值？",
+      },
+      {
+        title: "薇妲莉亞有毀掉配方的道德權利嗎？",
+        outcome: "她的選擇保護了他人，還是剝奪了別人自由選擇的權利？",
+      },
+      {
+        title: "人類的活力是否來自『有限』？",
+        outcome: "若無死神的鞭策，是否我們將不再奮鬥、不再愛人？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "gilgamesh-epic",
+        title: "吉爾伽美什史詩",
+        preview: "英雄追尋永生的旅程，最終領悟死亡才是人類的宿命與價值。",
+      },
+      {
+        id: "deaths-gift",
+        title: "《死亡的饋贈》",
+        preview: "如果可以選擇永遠不死，你會選嗎？或者你寧願有個句點？",
+      },
+    ],
+    references: [
+      "哲學故事集《The Pig That Wants to Be Eaten》第20則",
+      "哲學家伯納德·威廉斯（Bernard Williams）對永生與無聊的批判",
+      "尼采對永劫回歸的反思",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.6,
+      superpositionNodes: 10,
+    },
+  },
+  {
+    id: "epiphenia-free-will",
+    title: "原來我們都在胡思亂想",
+    themeImage: EPIPHENIA_THOUGHTS_PNG,
+    content: `<p>在埃皮菲尼亞星球上，人們相信思想只不過是身體運作的副產品，並不會真正影響行動。德克，一名地球觀光客，對此深感不解，因為在他看來，我們所做的決定與行為都是被「想法」驅動的。</p>
+  <p>然而，赫胥黎的回答令人震撼：想法只是身體行動後的一種副作用，並非原因。那種「我要點啤酒」的念頭，其實不過是腦內預設好的劇本中，剛好播放到那一行台詞。</p>
+  <p>德克一時無言，彷彿連「我思故我在」都開始崩解了。</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-500",
+        progress: 0.9,
+        description:
+          "直接挑戰自由意志與行動決定論，是哲學界與神經科學的大魔王等級題目。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-500",
+        progress: 0.9,
+        description:
+          "否定思想的因果力，會顛覆道德、責任與選擇的基礎，極具爭議。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-500",
+        progress: 0.85,
+        description:
+          "你的每個想法，都只是『身體自動反應後的評論』？光是這點就足以讓你靜靜坐在角落沉思三小時。",
+      },
+    ],
+    choices: [
+      {
+        title: "我們是否擁有真正的自由意志？",
+        outcome:
+          "如果所有行為都是神經生理機制的結果，那我們是否只是『被觀看的角色』？",
+      },
+      {
+        title: "思想若無因果力，道德責任如何建立？",
+        outcome: "如果你沒有選擇做壞事，只是『生理反應』——那你還該被懲罰嗎？",
+      },
+      {
+        title: "赫胥黎的說法是否本身就是思想的結果？",
+        outcome:
+          "如果思想無法影響行動，那麼說出這個理論的行為本身，是否自我矛盾？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "benjamin-libet-experiment",
+        title: "本傑明·李貝特實驗",
+        preview:
+          "實驗發現人在『意識到要動手』前，大腦已經做出決定。自由意志可能只是幻覺？",
+      },
+      {
+        id: "sam-harris-free-will",
+        title: "薩姆·哈里斯《自由意志》",
+        preview:
+          "神經科學視角下的自由意志死亡判決書：我們其實無法選擇我們的選擇。",
+      },
+    ],
+    references: [
+      "《The Pig That Wants to Be Eaten》第21則",
+      "神經科學家 Benjamin Libet 的自由意志研究",
+      "哲學家 Daniel Dennett 對意識與決定論的討論",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.95,
+      superpositionNodes: 11,
+    },
+  },
+  {
+    id: "lifeboat-death",
+    title: "你管別人怎麼死",
+    themeImage: LIFEBOAT_PNG,
+    content: `<p>在一艘已經安全的救生艇上，船員選擇不救一名求救的溺水者，只因為「救她會減少我們的舒適」與「這不是我們的錯」。</p>
+    <p>他們的選擇既沒有殺人，也不是出自惡意，只是單純地選擇不行動，眼睜睜看著那名婦人在求救中死亡。</p>
+    <p>這樣的道德冷漠與責任逃避，是錯的嗎？如果不救，是一種「讓她死」；而如果救，是「犧牲自己的餅乾與甜酒」——</p>
+    <p>在這種情境下，「無為」是否與「作惡」一樣可惡？</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.7,
+        explanation:
+          "此題挑戰我們對『不作為的責任』的理解，不如邏輯悖論般難解，但蘊含深刻的倫理判斷。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-400",
+        progress: 0.85,
+        explanation: "牽涉『道德義務 vs 個人利益』的對撞，容易引發價值觀衝突。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.75,
+        explanation:
+          "它讓人困惑於：如果我沒有害人，為什麼還有責任？逼迫我們質疑道德責任的邊界。",
+      },
+    ],
+    choices: [
+      {
+        title: "沒有害人，就是無罪嗎？",
+        outcome:
+          "這是『不作為』倫理的核心：你沒親手殺人，但也沒阻止死亡。冷漠與加害之間的界線模糊。",
+      },
+      {
+        title: "我們該負責所有能救的人嗎？",
+        outcome:
+          "道德義務有範圍嗎？如果我們對所有能救之人都有責任，那是否變成無盡的負擔？",
+      },
+      {
+        title: "群體默許的自私是否合理？",
+        outcome: "當群體默許一種選擇，是否代表它更合理？還是只是道德麻痺？",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "trolley-problem",
+        title: "電車難題",
+        preview: "改變軌道導致他人死亡是否更有責任？",
+      },
+      {
+        id: "organ-theft",
+        title: "器官搶奪理論",
+        preview:
+          "為了救五人而殺一人的醫生，和救一人而失五人的冷漠，哪一種更邪惡？",
+      },
+    ],
+    references: [
+      "Peter Singer’s work on moral obligation and effective altruism",
+      "The bystander effect and diffusion of responsibility in social psychology",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.72,
+      superpositionNodes: 9,
+    },
+  },
+  {
+    id: "beetle-game",
+    title: "甲蟲遊戲",
+    themeImage: BEETLE_PNG,
+    content: `<p>兩個孩子各自擁有一個神祕的盒子，互不查看，只將盒中物命名為「甲蟲」，卻從不描述、從不比對。他們就這樣愉快地玩著名為「甲蟲」的語言遊戲。</p>
+    <p>旁人納悶：「這個詞有意義嗎？還是只是毫無根據的代號？」</p>
+    <p>在這個遊戲裡，真正重要的不是盒子裡是什麼，而是「用詞」這件事本身。當每個人說「我有一隻甲蟲」，卻不能驗證對方說的是什麼，那麼「甲蟲」到底是什麼？</p>
+    <p>若每個人都只能用自己無法比對的經驗來定義語言，那語言還能溝通嗎？</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-500",
+        progress: 0.95,
+        explanation:
+          "這是對語言本質與主觀經驗的挑戰，需理解維根斯坦對『語言即使用』的深層論證。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-300",
+        progress: 0.6,
+        explanation: "雖然不是道德問題，但學界對私有語言是否成立仍有激辯。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-500",
+        progress: 0.9,
+        explanation:
+          "『如果我不能描述我的感覺給你聽，那我到底說了什麼？』這種語言與心靈的雙重模糊性極具迷惑性。",
+      },
+    ],
+    choices: [
+      {
+        title: "語言是否需要可共享的基礎？",
+        outcome:
+          "若語言沒有共通的參照依據，那麼『意思』是否就變成無意義的獨白？",
+      },
+      {
+        title: "主觀經驗能否被語言描述？",
+        outcome:
+          "我的『痛』和你的『痛』，我們說的是一樣的東西嗎？或者只是各自的『甲蟲』？",
+      },
+      {
+        title: "私有語言是否可能存在？",
+        outcome:
+          "維根斯坦認為不可能：語言之所以有意義，是因為它能在公共規則下被使用與理解。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "marys-room",
+        title: "瑪莉的房間",
+        preview:
+          "她知道所有關於紅色的知識，但當她真的『看到紅色』，那是新知識嗎？",
+      },
+      {
+        id: "brain-in-vat",
+        title: "缸中之腦",
+        preview: "如果我們的經驗都不能驗證，那語言、世界、真實還剩什麼？",
+      },
+    ],
+    references: [
+      "Ludwig Wittgenstein, Philosophical Investigations",
+      "The Private Language Argument",
+      "Saul Kripke’s interpretation of Wittgenstein (Kripkenstein)",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.83,
       superpositionNodes: 10,
     },
   },
