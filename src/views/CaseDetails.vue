@@ -33,7 +33,7 @@
                                 @click="selectedBranch = index">
                                 <div class="flex items-center gap-3">
                                     <div class="h-8 w-8 rounded-full bg-gradient-to-tr from-purple-400 to-pink-300" />
-                                    <span class="font-medium">{{ choice.title }}</span>
+                                    <span class="font-medium flex-1">{{ choice.title }}</span>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <div v-for="(ref, index) in caseData.references" :key="index"
                                 class="text-sm text-purple-600 font-mono hover:text-pink-500 transition-colors group">
                                 <span class="opacity-70 group-hover:opacity-100 transition-opacity">{{ ref
-                                }}</span>
+                                    }}</span>
                             </div>
                         </div>
                         <div class="sticky top-24 p-6 bg-white/80 rounded-xl shadow-inner-lg">
