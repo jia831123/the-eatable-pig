@@ -159,12 +159,7 @@ const recommendedQuestions = computed(() => {
 });
 
 onMounted(() => {
-  setTimeout(() => {
-    recommendedQuestions.value = recommendedQuestions.value.map(q => ({
-      ...q,
-      loaded: true
-    }))
-  }, 1500)
+
 })
 
 
