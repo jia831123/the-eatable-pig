@@ -81,6 +81,15 @@
                 </div>
             </div>
         </main>
+        <footer class="bg-gray-800 text-white p-6 mt-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-sm">
+                    探索更多作品：
+                    <a href="https://github.com/jia831123" class="text-blue-400 hover:underline font-semibold"
+                        target="_blank">William's GitHub</a>
+                </p>
+            </div>
+        </footer>
     </div>
 </template>
 
