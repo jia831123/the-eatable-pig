@@ -26,7 +26,7 @@ import DEATH_OVER_ENTERNITY from "../../public/img/death-over-eternity.png";
 import EPIPHENIA_THOUGHTS_PNG from "../../public/img/epiphenia-thoughts.png";
 import LIFEBOAT_PNG from "../../public/img/lifeboat.png";
 import BEETLE_PNG from "../../public/img/beetle.png";
-
+import SQUARE_CIRCLE_PNG from "../../public/img/square_circle.png";
 export const quantumCases = [
   {
     // 欺騙我們的魔鬼
@@ -1251,6 +1251,76 @@ export const quantumCases = [
     probabilityWave: {
       collapseThreshold: 0.83,
       superpositionNodes: 10,
+    },
+  },
+  // 上帝給我方形的圓
+  {
+    id: "square-circle",
+    title: "上帝，給我方形的圓",
+    themeImage: SQUARE_CIRCLE_PNG,
+    content: `<p>哲學家挑戰上帝：「你若真萬能，請創造一個方形的圓。」上帝說：「要有方形的圓」，結果卻創造出一個方形。哲學家不服：「你只是把『圓』的定義改掉罷了。」</p>
+    <p>這不只是語言的遊戲，而是對『萬能』本身的邏輯極限提出挑戰：如果一個東西的定義本身就是互相矛盾的，那麼就算是上帝，也不能『創造矛盾本身』，否則邏輯就崩壞了。</p>
+    <p>這也引出了另一層反思——語言是否可以任意指稱？還是有邏輯的結構限制語言的界線？</p>`,
+    tags: [
+      {
+        label: "燒腦度",
+        color: "bg-purple-400",
+        progress: 0.85,
+        explanation: "表面幽默實則深刻，挑戰對語言、邏輯與神性權能的根本理解。",
+      },
+      {
+        label: "爭議程度",
+        color: "bg-blue-500",
+        progress: 0.8,
+        explanation:
+          "涉及宗教信仰、神的全能性、語義界線，是哲學與信仰激辯的經典火藥桶。",
+      },
+      {
+        label: "迷惑值",
+        color: "bg-pink-400",
+        progress: 0.75,
+        explanation:
+          "用字面與概念的錯位製造迷惘，逼你重新檢視『語言』與『邏輯』是否可以被任意操縱。",
+      },
+    ],
+    choices: [
+      {
+        title: "語言的限制是邏輯的產物？",
+        outcome:
+          "『方形的圓』邏輯上自相矛盾，無論如何定義也無法同時成立。這不是能力的限制，而是語義結構的限制。",
+      },
+      {
+        title: "全能是否應包含違反邏輯？",
+        outcome:
+          "若『萬能』包括邏輯不可能的事，那一切語言與理性都將崩潰，進而使『萬能』變得無定義。",
+      },
+      {
+        title: "定義操縱能否解決問題？",
+        outcome:
+          "將『圓』重新定義成『方』可以避開問題，但那只是玩語言遊戲，逃避了真正的邏輯挑戰。",
+      },
+    ],
+    relatedCases: [
+      {
+        id: "liars-paradox",
+        title: "說謊者悖論",
+        preview: "『我現在說的話是謊話。』那麼他說的到底是真是假？",
+      },
+      {
+        id: "god-rock",
+        title: "上帝舉不起的石頭",
+        preview:
+          "如果上帝創造一顆自己也舉不起的石頭，那祂就不是萬能的；但如果祂不能創造，那也不是萬能的。",
+      },
+    ],
+    references: [
+      "全能悖論（Omnipotence Paradox）",
+      "Ludwig Wittgenstein, Tractatus Logico-Philosophicus",
+      "George Carlin’s humorous critiques of linguistic contradictions",
+    ],
+    probabilityWave: {
+      collapseThreshold: 0.7,
+      superpositionNodes: 9,
     },
   },
 ];

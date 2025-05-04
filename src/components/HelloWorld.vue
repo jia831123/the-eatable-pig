@@ -62,7 +62,7 @@
           </div>
 
           <!-- 推薦問題瀑布流 -->
-          <div class="mb-16">
+          <div v-if="false" class="mb-16">
             <h3 class="text-2xl font-bold text-gray-800 mb-6">推薦探索</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div v-for="(question, index) in recommendedQuestions" :key="index"
@@ -135,7 +135,7 @@ const stripHtmlTags = (html: string) => {
 };
 
 const featuredQuestions = computed(() => {
-  return [...quantumCases]
+  return [...quantumCases].sort(() => Math.random() - 0.5).slice(0, 5)
     .map(q => ({
       id: q.id,
       title: q.title,
