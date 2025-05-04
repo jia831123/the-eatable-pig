@@ -63,10 +63,10 @@
                             <div v-for="(ref, index) in caseData.references" :key="index"
                                 class="text-sm text-purple-600 font-mono hover:text-pink-500 transition-colors group">
                                 <span class="opacity-70 group-hover:opacity-100 transition-opacity">{{ ref
-                                }}</span>
+                                    }}</span>
                             </div>
                         </div>
-                        <div class="sticky top-24 p-6 bg-white/80 rounded-xl shadow-inner-lg">
+                        <div v-if="false" class="sticky top-24 p-6 bg-white/80 rounded-xl shadow-inner-lg">
                             <h3 class="text-lg font-semibold mb-4 text-purple-700">這些問題是親戚，還是共犯？</h3>
                             <div class="grid grid-cols-2 gap-3">
                                 <button v-for="(related, index) in caseData.relatedCases" :key="index"
